@@ -1,0 +1,19 @@
+Even with read DTOs the same error persisted. 
+However, when I changed this if block:
+
+if(someDTO.getTypeCode().equals("1")) {
+  // Do something
+}
+
+to this:
+
+if(someDTO.getTypeCode() != null) {
+  String typeCode = someDTO.getTypeCode();
+  if(typeCode.equals("1")) {
+    // Do something
+  }
+}
+
+, error in the test disappeared. 
+
+Is this the right approach?
