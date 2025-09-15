@@ -1,0 +1,3 @@
+1: Why I see the error: NullPointer Cannot invoke "String.equals(Object)" because the return value of "someDTO.getTypeCode" is null.
+2: The nested DTOs absolutely explain why the stubbing didn’t “stick.”
+3: Don’t mock DTOs. They’re plain data, so just build them with setters.

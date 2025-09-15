@@ -1,0 +1,18 @@
+I noticed that there are a few things that I didn't explain in my previous question.
+
+1: Nested objects
+There are ParentDTO, AnotherDTO, and SomeDTO.
+Here is how they are related to each other. 
+
+ParentDTO has AnotherDTO. 
+AnotherDTO has a list of SomeDTOs. 
+
+2: How the DTOs are passed when the method is called
+In the test code, after mocking someDTO and setting mock values with when(), the code continues like this:
+
+Result result = doTheWork(parentDTO);
+
+assertEquals("1", result.getTheChildDTOProperty);
+
+Is it highly likely that the error is because of this nested objects issue?
+If so, how do I handle this?

@@ -1,0 +1,19 @@
+I'm currently writing test code for Java mocking some objects. 
+
+When running the tests with mvn clean package, I get the following error:
+NullPointer Cannot invoke "String.equals(Object)" because the return value of "someDTO.getTypeCode" is null.
+
+I mocked the DTO object like so:
+SomeDTO someDTO = mock(SomeDTO.class);
+when(someDTO.getTypeCode()).thenReturn("1");
+
+And I think this line of code, which is executed in the actual runtime:
+if(someDTO.getTypeCode().equals("1")) {
+  // Handle the case scenario
+}
+
+is what the error is referring to, judging from the file name and the method name that are pointed out in the error message.
+
+What am I doing wrong?
+My Visual Studio Code prompts "anObject:1" inside the parenthesis of someDTO.getTypeCode().equals("1").
+Does the error have something to do with a data type mismatch?
