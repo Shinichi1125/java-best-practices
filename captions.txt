@@ -2,3 +2,4 @@
 2: The nested DTOs absolutely explain why the stubbing didn’t “stick.”
 3: Don’t mock DTOs. They’re plain data, so just build them with setters.
 4: A few cleaner null guards
+5: How to declare 'final' properties

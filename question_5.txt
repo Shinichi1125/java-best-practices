@@ -1,0 +1,13 @@
+In Java, what is the difference between the following ways of declaring "final" properties?
+
+static final
+private final
+
+The assumption is that it's to be used as a constant value. 
+Also, are there other ways to declare it, such as 
+
+private static final
+final
+etc
+
+?
