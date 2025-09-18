@@ -3,3 +3,8 @@
 3: Don’t mock DTOs. They’re plain data, so just build them with setters.
 4: A few cleaner null guards
 5: How to declare 'final' properties
+6: Runtime java.lang.NullPointerException: Cannot invoke java.time.temporal.Temporal.until
+7: Using a Spy to mock other methods in the same class
+8: Two "any LocalDate" as helperA's parameter
+9: What about when helperA's parameter is a list of LocalDate objects?
+10: Is that anyList nullable by default?

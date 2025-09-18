@@ -1,0 +1,3 @@
+The method that I'm testing right now contains other methods that are defined in the same class. 
+As the method's execution result is dependent on those other methods execution results, I want to mock them. 
+How do I do it?

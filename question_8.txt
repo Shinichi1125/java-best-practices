@@ -1,0 +1,3 @@
+How do I write the line of code equivalent to 
+doReturn(10).when(calculationService).helperA(anyInt());
+, when I want to take two "any LocalDate" as helperA's parameter, and also want to allow them to be null?

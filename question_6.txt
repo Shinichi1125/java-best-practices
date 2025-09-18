@@ -1,0 +1,4 @@
+In the context of Java, when I see an error: 
+"Runtime java.lang.NullPointerException: Cannot invoke 'java.time.temporal.Temporal.until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit)' 
+ because 'temporal1Inclusive' is null"
+while testing the code by running mvn clean package, where should I take a closer look at for debugging?
