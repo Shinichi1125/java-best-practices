@@ -8,3 +8,5 @@
 8: Two "any LocalDate" as helperA's parameter
 9: What about when helperA's parameter is a list of LocalDate objects?
 10: Is that anyList nullable by default?
+11: How to redirect logs to a file
+12: How to stop the program run by java -jar

@@ -1,0 +1,21 @@
+I'm using VS Code for my current Java project. 
+I can run the program by right-clicking and choosing the option "Run Java" in the file where I see 
+
+public static void main(String[] args)
+
+, and the IDE opens a console, where I can see the outputs of logger statements that I placed in the codebase. 
+
+At this moment, I want to observe what's going on at an early stage of the program execution. 
+I tried to see the logs, but the logs that I wanted to see were "washed away" because the processes kept flowing down in the console. 
+It seems that the console opened in VS Code has an upper limit on how far I can scroll up, 
+and because of this limit I can't scroll back to the point where I can see the early log statements. 
+
+What would be the solution for this?
+Should I run the program via a terminal (in my case Git Bash on Windows) after compiling it by mvn clean package, 
+and write it to an external file using ">" like this 
+
+> PATH_TO_THE_FILE_WHERE_I_WANT_ALL_THE_LOGGERS
+
+?
+
+If so, should I run the program in background?

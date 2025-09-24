@@ -1,0 +1,5 @@
+When running the program via VS Code, you can stop the program by either clicking the square icon at the top 
+or clicking somewhere in the console and executing the shortcut ctrl + c. 
+
+When running the program via java -jar target/, especially when writing the output with >, how do you stop it
+ (for normal program execution and running it in the background respectively)?
