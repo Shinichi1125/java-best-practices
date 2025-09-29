@@ -1,0 +1,7 @@
+After some feature branches were merged, I got back to the development branch. 
+When I tried to check if the project builds properly by running mvn clean package, I got the following error:
+"Failed to clean project: Failed to delete: THE_FILE_PATH"
+
+There was one file mentioned along with that error message, which was a BPMN file under the target directory. 
+
+Why is Maven unable to clean?
