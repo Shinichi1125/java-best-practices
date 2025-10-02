@@ -1,0 +1,12 @@
+I'm currently having a look at SonarQube's review for the code quality. 
+It's informing me about a security hotspot: 
+"Make sure the regex used here, which is vulnerable to polynomial runtime due to backgracking, cannot lead to denial of service."
+
+I took a closer look at the line of code where it is pointed out, which looks like this:
+Pattern pattern = Pattern.compile(PATTERN_NAME);
+
+PATTERN_NAME is defined as a regular expression at the top of the file. 
+
+I don't see what can be a problem here. 
+Is there something to fix here?
+Or is it okay to disregard this hotspot?
