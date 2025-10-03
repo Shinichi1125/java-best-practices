@@ -1,0 +1,2 @@
+Another example of SonarQube's advice is "Replace this use of System.out.println with a logger". 
+Why is it better to use loggers instead of System.out.println statements?
