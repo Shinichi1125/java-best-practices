@@ -1,0 +1,22 @@
+This is the method that I'm trying to test, which is in a controller file named "SomeController.java":
+
+private final SomeService someService;
+
+@AutoWired
+public SomeController(SomeService someService) {
+  this.someService = someService;
+}
+
+@PostMapping("/some-endpoint")
+public ResponseEntity<SomeResponse> startTheProcess(@RequestBody SomeRequest someRequest) throws Exception {
+  SomeDTO someDTO = handleProcess(someRequest.getRequestId());
+  someRequest.setProcessId(someDTO.getProcessId());
+  ProcessInstanceEvent event = someService.startProcess(someRequest);
+  return new ResponseEntity<SomeResponse>(mapToSomeResponse(event, someDTO.getProcessId(), HttpStatus.OK));
+}
+
+Can you write SomeControllerTest.java with the following assumptions?
+
+- Both handleProcess and mapToSomeResponse are located in the same file as SomeController.java.
+- Both handleProcess and mapToSomeResponse are protected, not private. 
+- The goal here is to write a unit test for startTheProcess, and handleProcess and mapToSomeResponse are to be mocked. 
