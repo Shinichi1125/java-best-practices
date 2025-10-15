@@ -1,0 +1,10 @@
+I'm now testning another class's method:
+
+@Test
+void startSomeControllerTest() throws Exception {
+  SomeDTO someDTO = someController.startSomeController();
+}
+
+The assumption is that startSomeController returns an object of SomeDTO type. 
+
+Can you write an assert statement that is appropriate for this case scenario?

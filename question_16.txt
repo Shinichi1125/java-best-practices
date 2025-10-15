@@ -1,0 +1,41 @@
+I'm currently writing a unit test for a Java method. 
+
+public ProcessInstanceEvent startTheProcess(SomeRequest someRequest) {
+  // It calles zeebeClient command (.send().join()) and returns a response
+}
+
+This is the test case: 
+
+@InjectMocks
+private ProcessServiceImpl processService;
+@Mock
+private SomeRequest someRequest;
+@Mock
+private ProcessInstanceEvent processInstanceEvent;
+
+@BeforeEach
+void setUp() {
+  processInstanceEvent = mock(ProcessInstanceEvent.class);
+}
+
+@test
+void startTheProcessTest() {
+  when(processService.startTheProcess(any(SomeRequest.class))).thenReturn(processInstanceEvent);
+  ProcessInstanceEvent response = processService.startTheProcess(someRequest);
+  assertNotNull(response);
+}
+
+When I run mvn clean package to see if the test passes, I get this error: 
+Invalid use of argument matchers
+//incorrect:
+someMethod(any(), "raw String");
+//correct:
+someMethod(any(), eq("String by matcher));
+
+I tried replacing the line of code:
+when(processService.startTheProcess(any(SomeRequest.class))).thenReturn(processInstanceEvent);
+with 
+when(processService.startTheProcess(any(), eq(SomeRequest.class))).thenReturn(processInstanceEvent);
+, but it didn't resolve the error.
+
+What am I doing wrong?

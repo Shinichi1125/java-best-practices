@@ -1,0 +1,20 @@
+When I commented out the "when thenReturn" line:
+
+@test
+void startTheProcessTest() {
+  //when(processService.startTheProcess(any(SomeRequest.class))).thenReturn(processInstanceEvent);
+  ProcessInstanceEvent response = processService.startTheProcess(someRequest);
+  assertNotNull(response);
+}
+
+, the error “Invalid use of argument matchers” went away, but now I get another error: expected: not <null>. 
+
+I thought it was because I was passing a mock object: someRequest, which is not initialized. 
+As processService.startTheProcess is a real method call whose logic relies on its parameter, 
+receiving an uninitialized parameter results in returning null. 
+So I initialized some of the fields, like someRequest.setRequstId("1234"), and then called the method:
+ProcessInstanceEvent response = processService.startTheProcess(someRequest);
+
+However, I still got the same error: expected: not <null>.
+
+Is it because I only set a few fields and some of the other fields that are required to call the method successfully are missing?

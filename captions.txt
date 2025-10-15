@@ -13,3 +13,6 @@
 13: Why is Maven unable to clean?
 14: SonarQube's review: Make sure the regex used here
 15: Why logger instead of System.out.println
+16: Error “Invalid use of argument matchers”
+17: Another error: expected: not <null>
+18: Basic test — only checks that something was returned
