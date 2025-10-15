@@ -1,0 +1,15 @@
+I got an error: 
+"
+NullInsteadOfMock
+Argument passed to when() is null!
+Example of correct stubbing:
+  doThrow(new RuntimeException()).when(mock).someMethod();
+Also, if you use @Mock annotation don't miss openMocks()
+"
+
+for this line of code:
+doReturn(dto).when(controller).handleProcess("REQ-1");
+
+Is it because handleProcess method has "throws Exception" like so?
+
+protected SomeDTO handleProcess(String requestId) throws Exception 

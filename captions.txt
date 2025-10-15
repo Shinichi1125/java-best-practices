@@ -17,3 +17,4 @@
 17: Another error: expected: not <null>
 18: Basic test — only checks that something was returned
 19: Testing a controller method
+20: Fix checklist for NullInsteadOfMock
