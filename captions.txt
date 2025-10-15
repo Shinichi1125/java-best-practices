@@ -18,3 +18,4 @@
 18: Basic test — only checks that something was returned
 19: Testing a controller method
 20: Fix checklist for NullInsteadOfMock
+21: assertEquals vs assertSame

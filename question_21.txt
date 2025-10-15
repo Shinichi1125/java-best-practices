@@ -1,0 +1,1 @@
+What's the reason assertEquals is used for one assertion and assertSame for another?
