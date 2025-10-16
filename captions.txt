@@ -19,3 +19,5 @@
 19: Testing a controller method
 20: Fix checklist for NullInsteadOfMock
 21: assertEquals vs assertSame
+22: The best practice is to use generics when iterating over keys
+23: Specifying the key type as Integer

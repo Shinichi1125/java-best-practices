@@ -1,0 +1,16 @@
+Let's say that there is a large method that spans across dozens of lines, and it has a big for loop:
+
+List keys = new ArrayList(someData.keySet());
+for(Object key: keys) {
+  ......
+}
+
+I want to abstract away this for loop as a method named iterateKeys and call it like this:
+List keys = new ArrayList(someData.keySet());
+iterateKeys(keys);
+
+However, I'm not fully sure what data type to be used when I define the method:
+
+private void iterateKeys(/*WhatDataType?*/ keys) {
+
+}

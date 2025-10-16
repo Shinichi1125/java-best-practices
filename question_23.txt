@@ -1,0 +1,4 @@
+I've figured out where the object someData comes from. 
+According to that, the data type is Map<Integer, SomeDTO>. 
+
+Now, can you specify the key type for the for loop?
