@@ -1,0 +1,28 @@
+I'm currently trying to test a Java method: 
+
+@Test
+void testGetPeriod_invalidDate_throwsException() {
+  Exception exception = assertThrows(DateTimeParseException.class, () -> someUtils.getPeriod(LocalDate.parse("invalid-date")));
+  assertEquals("Text 'invalid-date' could not be parsed at index 0", exception.getMessage());
+}
+
+This test case passed, but I got the following SonarQube issue: 
+"Refactor the code of the lambda to have only one invocation possibly throwing a runtime exception."
+
+So I changed the code like so:
+@Test
+void testGetPeriod_invalidDate_throwsException() {
+  LocalDate invalidDate = LocalDate.parse("invalid-date");
+  Exception exception = assertThrows(DateTimeParseException.class, () -> someUtils.getPeriod(invalidDate));
+  assertEquals("Text 'invalid-date' could not be parsed at index 0", exception.getMessage());
+}
+
+, after which I began to see this error while testing with mvn clean package:
+Errors:
+"DateTimeParse Test 'invalid-date' could not be parsed at index 0"
+
+Since mvn clean package fails because of this error, the CI/CD pipeline will also fail if I push this code change, which I want to avoid. 
+
+Now I'm wondering about two ways to address:
+- Is there a way to address this so that the SonarQube issue gets resolved without letting mvn clean package fail?
+- Or is this rather a case scenario where I don't have to take SonarQube's issue that seriously because not every issue needs to be resolved?
