@@ -1,0 +1,8 @@
+There is a line of code like this in my Java project: 
+return jdbcTemplate.query(SOME_SQL_STATEMENT, new Object[][id], new SomeRowMapper());
+
+And I got the following SonarQube issue:
+"Remove this use of 'query'; it is deprecated."
+
+Is it enough to just remove query, which makes the line of code look like this?
+return jdbcTemplate.(SOME_SQL_STATEMENT, new Object[][id], new SomeRowMapper());
